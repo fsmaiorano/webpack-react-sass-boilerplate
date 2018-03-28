@@ -4,7 +4,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const htmlPlugin = new HtmlWebPackPlugin({
     template: "./src/index.html",
     filename: "./index.html"
-  });
+});
 
 module.exports = {
     entry: [
@@ -34,21 +34,15 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: [{
-                    loader: "style-loader"
-                }, {
-                    loader: "css-loader"
-                }, {
-                    loader: "sass-loader",
-                }]
-            }
+                use: ['style-loader', 'css-loader', 'sass-loader']
+              }
         ]
     },
     plugins: [
         new HtmlWebPackPlugin({
-        template: "./src/index.html",
-        filename: "./index.html"
-      }),
-    ]
+            template: "./src/index.html",
+            filename: "./index.html"
+        }),
+    ],
 }
 

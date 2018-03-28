@@ -1,21 +1,21 @@
 {
-  "name": "github-starred-repositories",
+  "name": "webpack-react-sass-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "A quick start to React projects with Webpack and Sass.",
   "scripts": {
     "dev": "webpack-dev-server --mode=development",
     "build": "webpack --mode=production"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fsmaiorano/github-starred-repositories.git"
+    "url": "git+https://github.com/fsmaiorano/webpack-react-sass-boilerplate.git"
   },
   "author": "Fábio Santini Maiorano",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fsmaiorano/github-starred-repositories/issues"
+    "url": "https://github.com/fsmaiorano/webpack-react-sass-boilerplate/issues"
   },
-  "homepage": "https://github.com/fsmaiorano/github-starred-repositories#readme",
+  "homepage": "https://github.com/fsmaiorano/webpack-react-sass-boilerplate#readme",
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.42",
     "@babel/core": "^7.0.0-beta.42",
