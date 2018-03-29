@@ -1,6 +1,7 @@
 
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const Path = require('path');
 
 const htmlPlugin = new HtmlWebPackPlugin({
     template: "./src/index.html",
@@ -36,7 +37,12 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
-              }
+              },
+              {
+                test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+                include: [Path.join(__dirname, "src/assets")],
+                loader: "file-loader?name=assets/[name].[ext]"
+            }
         ]
     },
     plugins: [
@@ -45,7 +51,7 @@ module.exports = {
             filename: "./index.html"
         }),
         new CopyWebpackPlugin([
-            { from: 'src/shared/assets', to: 'assets' }
+            { from: 'src/assets', to: 'assets' }
         ])
     ],
     devtool: '#inline-source-map'
