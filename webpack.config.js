@@ -1,5 +1,6 @@
 
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const htmlPlugin = new HtmlWebPackPlugin({
     template: "./src/index.html",
@@ -43,6 +44,9 @@ module.exports = {
             template: "./src/index.html",
             filename: "./index.html"
         }),
+        new CopyWebpackPlugin([
+            { from: 'src/shared/assets', to: 'assets' }
+        ])
     ],
     devtool: '#inline-source-map'
 }
