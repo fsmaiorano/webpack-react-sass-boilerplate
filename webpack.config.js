@@ -40,8 +40,8 @@ module.exports = {
               },
               {
                 test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-                include: [Path.join(__dirname, "src/assets")],
-                loader: "file-loader?name=assets/[name].[ext]"
+                include: [Path.join(__dirname, "src/shared/assets")],
+                loader: "file-loader?name=shared/assets/[name].[ext]"
             }
         ]
     },
@@ -51,7 +51,7 @@ module.exports = {
             filename: "./index.html"
         }),
         new CopyWebpackPlugin([
-            { from: 'src/assets', to: 'assets' }
+            { from: 'src/shared/assets', to: 'shared/assets' }
         ])
     ],
     devtool: '#inline-source-map'
